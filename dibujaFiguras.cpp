@@ -55,6 +55,35 @@ void triangulo(int anc, char simb,bool rel)
     }
 }
 
+void rombo(int anc, char simb,bool rel)
+{
+    if (anc==1)
+        anc+=2;
+    int principio=(anc-1)/2;
+    int fin=(anc-1)/2;
+    for (int i=0; i<anc; i++)
+    {
+        for (int j=0; j<anc;j++)
+        {
+            if (j==principio || j==fin)
+                cout << simb;
+            else if (j<=principio && j>=fin && rel)
+                cout << simb;
+            else
+                cout << " ";
+        }
+        if (((anc-1)/2) <= i) {
+            principio--;
+            fin++;
+        }
+        else {
+            principio++;
+            fin--;
+        }
+        cout << endl;
+    }
+}
+
 int main ()
 {
     int al,anc;
