@@ -65,7 +65,7 @@ int main ()
     cout << "CONSTRUYAMOS UNA FIGURA" << endl;
     cout << "-----------------------" << endl << endl;
     do {
- 
+         cout << "Que figura quieres triangulo, rombo o cuadrado? (t/r/c)" << endl;
         cin >> fig;
         cout << endl;
     }while(fig!='t' && fig!='T' && fig!='c' && fig!='C');
